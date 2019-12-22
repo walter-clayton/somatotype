@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <!-- STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- FONTAWESOME -->
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+<head>
+	<title>Somatotype</title>
+</head>
+<body>
+<div class="container  p-3 border">
+<h1 class="d-flex justify-content-center">SOMATOTYPE</h1>
+  <div class=" row d-flex justify-content-center">
+	<section class="col-12 col-lg-8 p-3 ">
+        
+        <!-- <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#what" role="button" aria-expanded="false" aria-controls="what">
+            What is somatotype?
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#why" role="button" aria-expanded="false" aria-controls="why">
+            Why use somatotype?
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#how" role="button" aria-expanded="false" aria-controls="how">
+            How do I take measurements?
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#equipment" role="button" aria-expanded="false" aria-controls="equipment">
+            Equipment
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#references" role="button" aria-expanded="false" aria-controls="references">
+            References
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#examples" role="button" aria-expanded="false" aria-controls="examples">
+            Examples
+        </button> -->
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#measurements" role="button" aria-expanded="false" aria-controls="measurements">
+            Try the Test
+        </button>
+		<form class="bg-light p-2 border rounded" id = "measurements" onSubmit="myform()" action="#">
+                    <div class="form-group ">                                    
+                        <label for="height">Height</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" id = "height" placeholder="180" aria-label="Height" aria-describedby="basic-addon1" value="" name="height">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span>cm</span>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bodyweight">Bodyweight</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id = "bodyweight" placeholder="80" aria-label="Bodyweight" aria-describedby="basic-addon1" value="" name = "bodyweight" name = "weight">									
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span>kg</span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tricep">Tricep skin fold</label>
+                        <div class="input-group">
+                                <input type="text" class="form-control" id = "tricep" placeholder="12" aria-label="Tricep" aria-describedby="basic-addon1" value="" name = "tricep_skinfold">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span>mm</span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subscapular">Subscapular skin fold</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id = "subscapular" placeholder="12" aria-label="Subscapular" aria-describedby="basic-addon1" value="" name = "subscapular_skinfold">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                    <span>mm</span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="supraspinal">Supraspinal skin fold</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id = "supraspinal" placeholder="12" aria-label="Supraspinal" aria-describedby="basic-addon1" value="" name = "supraspinal_skinfold">
+                            <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span>mm</span>
+                            </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="form-group">
+                        <label for="humerus">Humerus breadth</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id = "humerus" placeholder="7" aria-label="Humerus" aria-describedby="basic-addon1" value="" name= "humerus_girth">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span>cm</span>
+                                </div>
+                            </div>
+                        </div>                                        
+                    </div>
+                    <div class="form-group">
+                        <label for="femur">Femur breadth</label>
+                        <div class="input-group">
+                                <input type="text" class="form-control" id = "femur" placeholder="8" aria-label="Femur" aria-describedby="basic-addon1" value="" name="femur_girth">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span>cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="calf">Calf circumference</label>
+                        <div class="input-group">
+                                <input type="text" class="form-control" id = "calf" placeholder="38" aria-label="calf" aria-describedby="basic-addon1" value="" name="calf_circumference">
+                                    <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span>cm</span>
+                                    </div>
+                                </div>
+                        </div>                                        
+                    </div>
+                    <div class="form-group">
+                        <label for="bicep">Bicep circumference</label>
+                        <div class="input-group">
+                                <input type="text" class="form-control" id = "bicep" placeholder="38" aria-label="Femur" aria-describedby="basic-addon1" value="" name="bicep_circumference">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span>cm</span>
+                                    </div>
+                                </div>
+                        </div>                                        
+                    </div>
+                <button type="button" class="btn btn-secondary justify-content-center mx-auto p-3 m-2"  onclick = "myform()" name="submit">Submit <i class="fas fa-paper-plane" style="font-size: 1em; color: white"></i></button>
+        </form>
+            <!-- OUTPUT -->
+            <div class = "d-flex row justify-content-center mx-auto mt-5">
+                Hello, thanks for putting in your details.
+                Here are your results :
+                <!-- height="577.5" width = "494" -->
+                <canvas class = "d-flex justify-content-center mx-auto " id="somatotypeCanvas"  height="577.5" width = "494" style="border:1px solid #000000;"></canvas>
+            </div>
+    </section>
+   </div>
+</div>
+
+<footer>
+    <p class="d-flex justify-content-center">&copy; 2019 Walter Clayton, All Rights Reserved</p>
+</footer>
+
+</body>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+</html>
