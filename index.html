@@ -12,11 +12,33 @@
 	<title>Somatotype</title>
 </head>
 <body>
-<div class="container  p-3">
+<div class="container  p-3 border">
 <h1 class="d-flex justify-content-center">SOMATOTYPE</h1>
   <div class=" row d-flex justify-content-center">
 	<section class="col-12 col-lg-8 p-3 ">
-		<form onSubmit="myform()" action="#">
+        
+        <!-- <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#what" role="button" aria-expanded="false" aria-controls="what">
+            What is somatotype?
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#why" role="button" aria-expanded="false" aria-controls="why">
+            Why use somatotype?
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#how" role="button" aria-expanded="false" aria-controls="how">
+            How do I take measurements?
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#equipment" role="button" aria-expanded="false" aria-controls="equipment">
+            Equipment
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#references" role="button" aria-expanded="false" aria-controls="references">
+            References
+        </button>
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#examples" role="button" aria-expanded="false" aria-controls="examples">
+            Examples
+        </button> -->
+        <button class="btn btn-secondary justify-content-center mx-auto p-3 m-2" data-toggle="collapse" href="#measurements" role="button" aria-expanded="false" aria-controls="measurements">
+            Try the Test
+        </button>
+		<form class="bg-light p-2 border rounded" id = "measurements" onSubmit="myform()" action="#">
                     <div class="form-group ">                                    
                         <label for="height">Height</label>
                         <div class="input-group">
@@ -116,12 +138,12 @@
                                 </div>
                         </div>                                        
                     </div>
-                <button type="button" class="btn btn-secondary justify-content-center mx-auto"  onclick = "myform()" style="font-size: 1em; width:100%;" name="submit">Submit <i class="fas fa-paper-plane" style="font-size: 1em; color: white"></i></button>
+                <button type="button" class="btn btn-secondary justify-content-center mx-auto p-3 m-2"  onclick = "myform()" name="submit">Submit <i class="fas fa-paper-plane" style="font-size: 1em; color: white"></i></button>
         </form>
             <!-- OUTPUT -->
-            <div class = "d-flex row justify-content-center mx-auto col-lg-6">
-                Hello <span id = "nameSurname"></span>, thanks for putting in your details.
-                Here are your results
+            <div class = "d-flex row justify-content-center mx-auto mt-5">
+                Hello, thanks for putting in your details.
+                Here are your results :
                 <!-- height="577.5" width = "494" -->
                 <canvas class = "d-flex justify-content-center mx-auto " id="somatotypeCanvas"  height="577.5" width = "494" style="border:1px solid #000000;"></canvas>
             </div>
