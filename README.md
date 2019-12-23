@@ -6,7 +6,7 @@ This is a page that allows users to know their somatotype.
 
 Users put in their measurements, and the canvas outputs their results on the graph. 
 
-The biggest difficulty was the graph. It required some knowledge in trigonometry and mmathematics. 
+The biggest difficulty was the graph. It required some knowledge in trigonometry and mathematics. 
 
 Click here: [Demo](https://walter-clayton.github.io/somatotype/)
 
