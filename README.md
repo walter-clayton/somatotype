@@ -16,14 +16,19 @@ Click here: [Demo](https://walter-clayton.github.io/somatotype/)
 
 * User input
 * Graph ouput
+* Information (why, what, how, references, examples)
+* Comparisons in the examples
+* Amazon Affiliate links
+* Responsive
 
 ## Things to improve
 
-* Information (why, what, how, references, examples)
-* Comparisons
-* Responsive
+* Customised Comparisons 
 * Share results via email
 
+## BONUSES
+
+* 3D View of graph
 
 ## Built with
 
