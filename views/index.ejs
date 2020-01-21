@@ -667,7 +667,9 @@ var oppositeCal = (1/Math.sqrt(3)) * 400;
 
 
         ctx.font = "15px Georgia";
-        ctx.fillText( " " + endomorphy.toFixed(0) + "-" + mesomorphy.toFixed(0) + "-" + ectomorphy.toFixed(0), rel_x, rel_y);
+        ctx.textAlign = "center";
+        ctx.fillText( " " + endomorphy.toFixed(0) + "-" + mesomorphy.toFixed(0) + "-" + ectomorphy.toFixed(0), rel_x, rel_y+20);
+        ctx.fillText( "you" , rel_x, (rel_y+35));
         ctx.fillStyle = "white";
 
         console.log("endomorphy:" + somatotype.endomorphy)
@@ -680,7 +682,7 @@ var oppositeCal = (1/Math.sqrt(3)) * 400;
 var sport_endomorphy = <%= sport.endomorphy %>,
     sport_mesomorphy = <%= sport.mesomorphy %>,
     sport_ectomorphy = <%= sport.ectomorphy %>;
-var sport_sport      = <%= sportname %>;
+var sport_sport      =" <%= sport.sport %>";
 
 
     var canvas = document.getElementById("somatotypeCanvas");
@@ -720,8 +722,8 @@ var sport_sport      = <%= sportname %>;
 
         ctx.font = "15px Georgia";
         ctx.textAlign = "center";
-        ctx.fillText( <%= sport.endomorphy %>  + "-" + <%=sport.mesomorphy %> + "-" + <%= sport.ectomorphy %>, rel_x, rel_y+20);
-        ctx.fillText( <%= sportname %> , rel_x, (rel_y+35));
+        ctx.fillText(<%= sport.endomorphy %>  + "-" + <%=sport.mesomorphy %> + "-" + <%= sport.ectomorphy %>, rel_x, rel_y+20);
+        ctx.fillText( "<%= sport.sport %>" , rel_x, (rel_y+35));
         ctx.fillStyle = "blue";
 
                 }
