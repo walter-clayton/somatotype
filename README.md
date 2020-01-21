@@ -10,7 +10,7 @@ The biggest difficulty was the graph. It required some knowledge in trigonometry
 
 Click here: [Demo](https://walter-clayton.github.io/somatotype/)
 
-![capture](somatotype.gif)
+![capture](./public/images/somatotype.gif)
 
 ## Features
 
