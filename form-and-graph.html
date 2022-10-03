@@ -6,16 +6,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 	<title>Somatotype</title>
+    <script type="text/javascript">
+        function updateSlider(slideAmount) {
+        //get the element
+        console.log(slideAmount)
+        var display = document.getElementById("height-range");
+        //show the amount
+        display.innerHTML=slideAmount;
+        }
+    </script>
 </head>
     <body>
         <div class="container text-center">
             <div class="row align-items-start">
               <div class="col">
                   <form class="bg-light p-3 border rounded" id = "measurements" onSubmit="myform()" action="#">
-                      <div class="form-group ">                                    
+                    <div class="form-group ">                                    
                           <label for="height">Height</label>
                           <div class="input-group">
-                          <input type="text" class="form-control" id = "height" placeholder="180" aria-label="Height" aria-describedby="basic-addon1" value="" name="height">
+                            <div class="input-group-text chosen" id="height-range">
+                                <span>0</span>
+                            </div>
+                            <input type="range" class="form-control" id = "height" aria-label="Height" value="" name="height" min="54" max="272" step="1" onchange="updateSlider(this.value)">
                               <div class="input-group-append">
                                   <div class="input-group-text">
                                       <span>cm</span>
