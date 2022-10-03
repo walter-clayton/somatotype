@@ -52,14 +52,12 @@ function myform() {
     // 15% up from the bottom of the canvas. This is where the triangle starts
     // ctx.moveTo(0,357);
     // ctx.lineTo(400,357);
-    // ctx.stroke();    
-
+    // ctx.stroke();  
 
     // middle line of the canvas
     ctx.moveTo(247,116);
     ctx.lineTo(247,516);
     ctx.stroke();
-
 
     // reference for the top of the triangle
     ctx.beginPath();    
