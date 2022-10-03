@@ -8,115 +8,120 @@
 	<title>Somatotype</title>
 </head>
     <body>
-        <form class="bg-light p-3 border rounded" id = "measurements" onSubmit="myform()" action="#">
-            <div class="form-group ">                                    
-                <label for="height">Height</label>
-                <div class="input-group">
-                <input type="text" class="form-control" id = "height" placeholder="180" aria-label="Height" aria-describedby="basic-addon1" value="" name="height">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span>cm</span>
-                        </div>
-                    </div>   
-                </div>
+        <div class="container text-center">
+            <div class="row align-items-start">
+              <div class="col">
+                  <form class="bg-light p-3 border rounded" id = "measurements" onSubmit="myform()" action="#">
+                      <div class="form-group ">                                    
+                          <label for="height">Height</label>
+                          <div class="input-group">
+                          <input type="text" class="form-control" id = "height" placeholder="180" aria-label="Height" aria-describedby="basic-addon1" value="" name="height">
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                      <span>cm</span>
+                                  </div>
+                              </div>   
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="bodyweight">Bodyweight</label>
+                          <div class="input-group">
+                          <input type="text" class="form-control" id = "bodyweight" placeholder="80" aria-label="Bodyweight" aria-describedby="basic-addon1" value="" name = "bodyweight" name = "weight">									
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                      <span>kg</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="tricep">Tricep skin fold</label>
+                          <div class="input-group">
+                              <input type="text" class="form-control" id = "tricep" placeholder="12" aria-label="Tricep" aria-describedby="basic-addon1" value="" name = "tricep_skinfold">
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                      <span>mm</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="subscapular">Subscapular skin fold</label>
+                          <div class="input-group">
+                          <input type="text" class="form-control" id = "subscapular" placeholder="12" aria-label="Subscapular" aria-describedby="basic-addon1" value="" name = "subscapular_skinfold">
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                  <span>mm</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="supraspinal">Supraspinal skin fold</label>
+                          <div class="input-group">
+                              <input type="text" class="form-control" id = "supraspinal" placeholder="12" aria-label="Supraspinal" aria-describedby="basic-addon1" value="" name = "supraspinal_skinfold">
+                              <div class="input-group-append">
+                              <div class="input-group-text">
+                                  <span>mm</span>
+                              </div>
+                              </div>
+                          </div>    
+                      </div>
+                      <div class="form-group">
+                          <label for="humerus">Humerus breadth</label>
+                          <div class="input-group">
+                              <input type="text" class="form-control" id = "humerus" placeholder="7" aria-label="Humerus" aria-describedby="basic-addon1" value="" name= "humerus_girth">
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                      <span>cm</span>
+                                  </div>
+                              </div>
+                          </div>                                        
+                      </div>
+                      <div class="form-group">
+                          <label for="femur">Femur breadth</label>
+                          <div class="input-group">
+                                  <input type="text" class="form-control" id = "femur" placeholder="8" aria-label="Femur" aria-describedby="basic-addon1" value="" name="femur_girth">
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                      <span>cm</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="calf">Calf circumference</label>
+                          <div class="input-group">
+                              <input type="text" class="form-control" id = "calf" placeholder="38" aria-label="calf" aria-describedby="basic-addon1" value="" name="calf_circumference">
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                      <span>cm</span>
+                                  </div>
+                              </div>
+                          </div>                                        
+                      </div>
+                      <div class="form-group">
+                          <label for="bicep">Bicep circumference</label>
+                          <div class="input-group">
+                              <input type="text" class="form-control" id = "bicep" placeholder="38" aria-label="Femur" aria-describedby="basic-addon1" value="" name="bicep_circumference">
+                              <div class="input-group-append">
+                                  <div class="input-group-text">
+                                      <span>cm</span>
+                                  </div>
+                              </div>
+                          </div>                                        
+                      </div>
+                  <button type="button" class="btn btn-secondary justify-content-center mx-auto p-3 m-2"  onclick = "myform()" name="submit">Submit <i class="fas fa-paper-plane" style="font-size: 1em; color: white"></i></button>
+                  </form>
+              </div>
+              <div class="col">
+                  <div class = "d-flex row justify-content-center mx-auto">
+                      <!-- height="577.5" width = "494" -->
+                      <canvas class = "d-flex justify-content-center mx-auto " id="somatotypeCanvas"  height="577.5" width = "494" style="border:1px solid #000000;"></canvas>
+                  </div>
+              </div>
             </div>
-            <div class="form-group">
-                <label for="bodyweight">Bodyweight</label>
-                <div class="input-group">
-                <input type="text" class="form-control" id = "bodyweight" placeholder="80" aria-label="Bodyweight" aria-describedby="basic-addon1" value="" name = "bodyweight" name = "weight">									
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span>kg</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="tricep">Tricep skin fold</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id = "tricep" placeholder="12" aria-label="Tricep" aria-describedby="basic-addon1" value="" name = "tricep_skinfold">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span>mm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="subscapular">Subscapular skin fold</label>
-                <div class="input-group">
-                <input type="text" class="form-control" id = "subscapular" placeholder="12" aria-label="Subscapular" aria-describedby="basic-addon1" value="" name = "subscapular_skinfold">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                        <span>mm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="supraspinal">Supraspinal skin fold</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id = "supraspinal" placeholder="12" aria-label="Supraspinal" aria-describedby="basic-addon1" value="" name = "supraspinal_skinfold">
-                    <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span>mm</span>
-                    </div>
-                    </div>
-                </div>    
-            </div>
-            <div class="form-group">
-                <label for="humerus">Humerus breadth</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id = "humerus" placeholder="7" aria-label="Humerus" aria-describedby="basic-addon1" value="" name= "humerus_girth">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span>cm</span>
-                        </div>
-                    </div>
-                </div>                                        
-            </div>
-            <div class="form-group">
-                <label for="femur">Femur breadth</label>
-                <div class="input-group">
-                        <input type="text" class="form-control" id = "femur" placeholder="8" aria-label="Femur" aria-describedby="basic-addon1" value="" name="femur_girth">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span>cm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="calf">Calf circumference</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id = "calf" placeholder="38" aria-label="calf" aria-describedby="basic-addon1" value="" name="calf_circumference">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span>cm</span>
-                        </div>
-                    </div>
-                </div>                                        
-            </div>
-            <div class="form-group">
-                <label for="bicep">Bicep circumference</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id = "bicep" placeholder="38" aria-label="Femur" aria-describedby="basic-addon1" value="" name="bicep_circumference">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span>cm</span>
-                        </div>
-                    </div>
-                </div>                                        
-            </div>
-        <button type="button" class="btn btn-secondary justify-content-center mx-auto p-3 m-2"  onclick = "myform()" name="submit">Submit <i class="fas fa-paper-plane" style="font-size: 1em; color: white"></i></button>
-    </form>
-    </div>
-    <!-- OUTPUT -->
-    <div class = "d-flex row justify-content-center mx-auto mt-5">
-        Hello, thanks for putting in your details.
-        Here are your results :
-        <!-- height="577.5" width = "494" -->
-        <canvas class = "d-flex justify-content-center mx-auto " id="somatotypeCanvas"  height="577.5" width = "494" style="border:1px solid #000000;"></canvas>
+        </div>
     </div>
     <footer>
         <p class="d-flex justify-content-center">&copy; 2022 Walter Clayton, All Rights Reserved</p>
