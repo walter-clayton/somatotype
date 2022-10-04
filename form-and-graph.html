@@ -19,7 +19,7 @@
             display.innerHTML = slideAmount;
         }
 
-    
+
 
 
     </script>
@@ -201,60 +201,60 @@
         var slider1 = document.getElementById("bodyweight");
         var output1 = document.getElementById("height-range1");
 
-        output1.innerHTML = slider1.value; 
+        output1.innerHTML = slider1.value;
         slider1.oninput = function () {
             output1.innerHTML = this.value;
         }
         var slider2 = document.getElementById("tricep");
         var output2 = document.getElementById("height-range2");
 
-        output2.innerHTML = slider1.value; 
+        output2.innerHTML = slider1.value;
         slider2.oninput = function () {
             output2.innerHTML = this.value;
         }
         var slider3 = document.getElementById("subscapular");
         var output3 = document.getElementById("height-range3");
 
-        output3.innerHTML = slider1.value; 
+        output3.innerHTML = slider1.value;
         slider3.oninput = function () {
             output3.innerHTML = this.value;
         }
         var slider4 = document.getElementById("supraspinal");
         var output4 = document.getElementById("height-range4");
 
-        output4.innerHTML = slider1.value; 
+        output4.innerHTML = slider1.value;
         slider4.oninput = function () {
             output4.innerHTML = this.value;
         }
         var slider5 = document.getElementById("humerus");
         var output5 = document.getElementById("height-range5");
 
-        output5.innerHTML = slider1.value; 
+        output5.innerHTML = slider1.value;
         slider5.oninput = function () {
             output5.innerHTML = this.value;
         }
         var slider6 = document.getElementById("femur");
         var output6 = document.getElementById("height-range6");
 
-        output6.innerHTML = slider1.value; 
+        output6.innerHTML = slider1.value;
         slider6.oninput = function () {
             output6.innerHTML = this.value;
         }
         var slider7 = document.getElementById("calf");
         var output7 = document.getElementById("height-range7");
 
-        output7.innerHTML = slider1.value; 
+        output7.innerHTML = slider1.value;
         slider7.oninput = function () {
             output7.innerHTML = this.value;
         }
 
         function updateProgress(slider) {
-    let progress = document.getElementById(slider.dataset.progressId);
-    const percent = getSliderPercent(slider);
+            let progress = document.getElementById(slider.dataset.progressId);
+            const percent = getSliderPercent(slider);
 
-    progress.style.width = percent * 100 + "%";
-  
-}
+            progress.style.width = percent * 100 + "%";
+
+        }
     </script>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
