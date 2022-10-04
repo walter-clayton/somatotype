@@ -1,12 +1,6 @@
 # SOMATOTYPE
 
-I built this page to practice my frontend and Vanilla Javascript skills. 
-
 This is a page that allows users to know their somatotype. 
-
-Users put in their measurements, and the canvas outputs their results on the graph. 
-
-The biggest difficulty was the graph. It required some knowledge in trigonometry and mathematics. 
 
 Click here: [Demo](https://walter-clayton.github.io/somatotype/)
 
@@ -45,4 +39,4 @@ Click here: [Demo](https://walter-clayton.github.io/somatotype/)
 
 ## Copyright
 
-<p>&copy; 2019 Walter Clayton, All Rights Reserved<p>
+<p>&copy; 2022 Walter Clayton, All Rights Reserved<p>
