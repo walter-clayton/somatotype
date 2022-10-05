@@ -41,7 +41,7 @@ function myform() {
             var ectomorphy = 0.1
             console.log( "ectomorphy : " + ectomorphy);
         }
-
+    document.getElementById("results").innerHTML = " " + endomorphy.toFixed(0) + "-" + mesomorphy.toFixed(0) + "-" + ectomorphy.toFixed(0)
     console.log(somatotype);
     console.log(Object.values(somatotype));
 
