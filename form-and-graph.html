@@ -5,124 +5,121 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-	<title>Somatotype</title>
-    <script type="text/javascript">
-        function updateSlider(slideAmount) {
-        //get the element
-        console.log(slideAmount)
-        var display = document.getElementById("height-range");
-        //show the amount
-        display.innerHTML=slideAmount;
-        }
-    </script>
+	<title>Somatotype</title>  
 </head>
     <body>
-        <div class="container text-center">
+        <div class="container p-5 text-center">
             <div class="row align-items-start">
               <div class="col">
-                  <form class="bg-light p-3 border rounded" id = "measurements" onSubmit="myform()" action="#">
-                    <div class="form-group ">                                    
-                          <label for="height">Height</label>
-                          <div class="input-group">
-                            <div class="input-group-text chosen" id="height-range">
-                                <span>0</span>
+                  <form class="bg-light p-3 border rounded" id="measurements" onSubmit="myform()" action="#">
+                    <div class="form-group">                                    
+                        <label for="height">Height</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>54</span>
                             </div>
-                            <input type="range" class="form-control" id = "height" aria-label="Height" value="" name="height" min="54" max="272" step="1" onchange="updateSlider(this.value)">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span>cm</span>
-                                  </div>
-                              </div>   
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label for="bodyweight">Bodyweight</label>
-                          <div class="input-group">
-                          <input type="text" class="form-control" id = "bodyweight" placeholder="80" aria-label="Bodyweight" aria-describedby="basic-addon1" value="" name = "bodyweight" name = "weight">									
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span>kg</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label for="tricep">Tricep skin fold</label>
-                          <div class="input-group">
-                              <input type="text" class="form-control" id = "tricep" placeholder="12" aria-label="Tricep" aria-describedby="basic-addon1" value="" name = "tricep_skinfold">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span>mm</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label for="subscapular">Subscapular skin fold</label>
-                          <div class="input-group">
-                          <input type="text" class="form-control" id = "subscapular" placeholder="12" aria-label="Subscapular" aria-describedby="basic-addon1" value="" name = "subscapular_skinfold">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                  <span>mm</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label for="supraspinal">Supraspinal skin fold</label>
-                          <div class="input-group">
-                              <input type="text" class="form-control" id = "supraspinal" placeholder="12" aria-label="Supraspinal" aria-describedby="basic-addon1" value="" name = "supraspinal_skinfold">
-                              <div class="input-group-append">
-                              <div class="input-group-text">
-                                  <span>mm</span>
-                              </div>
-                              </div>
-                          </div>    
-                      </div>
-                      <div class="form-group">
-                          <label for="humerus">Humerus breadth</label>
-                          <div class="input-group">
-                              <input type="text" class="form-control" id = "humerus" placeholder="7" aria-label="Humerus" aria-describedby="basic-addon1" value="" name= "humerus_girth">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span>cm</span>
-                                  </div>
-                              </div>
-                          </div>                                        
-                      </div>
-                      <div class="form-group">
-                          <label for="femur">Femur breadth</label>
-                          <div class="input-group">
-                                  <input type="text" class="form-control" id = "femur" placeholder="8" aria-label="Femur" aria-describedby="basic-addon1" value="" name="femur_girth">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span>cm</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <label for="calf">Calf circumference</label>
-                          <div class="input-group">
-                              <input type="text" class="form-control" id = "calf" placeholder="38" aria-label="calf" aria-describedby="basic-addon1" value="" name="calf_circumference">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span>cm</span>
-                                  </div>
-                              </div>
-                          </div>                                        
-                      </div>
-                      <div class="form-group">
-                          <label for="bicep">Bicep circumference</label>
-                          <div class="input-group">
-                              <input type="text" class="form-control" id = "bicep" placeholder="38" aria-label="Femur" aria-describedby="basic-addon1" value="" name="bicep_circumference">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span>cm</span>
-                                  </div>
-                              </div>
-                          </div>                                        
-                      </div>
+                            <div class="input-group-text">
+                                <span>cm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="height" aria-label="Height" value="54" name="height" min="54" max="272" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="bodyweight">Bodyweight</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>35</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>kg</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="bodyweight" aria-label="Bodyweight" value="35" name="bodyweight" min="35" max="300" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="tricep">Tricep skinfold</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>1</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>mm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="tricep" aria-label="Tricep" value="1" name="tricep_skinfold" min="1" max="50" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="subscapular">Subscapular skinfold</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>1</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>mm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="subscapular" aria-label="Subscapular" value="1" name="subscapular_skinfold" min="1" max="50" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="supraspinal">Supraspinal skinfold</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>1</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>mm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="supraspinal" aria-label="Supraspinal" value="1" name="supraspinal_skinfold" min="1" max="50" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="humerus">Humerus breadth</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>4</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>cm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="humerus" aria-label="Humerus" value="1" name="humerus_girth" min="4" max="12" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="femur">Femur breadth</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>4</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>cm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="femur" aria-label="Femur" value="1" name="femur_girth" min="4" max="12" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="calf">Calf circumference</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>20</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>cm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="calf" aria-label="Calf" value="1" name="calf_circumference" min="20" max="60" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
+                    <div class="form-group">                                    
+                        <label for="calf">Bicep circumference</label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                <span>20</span>
+                            </div>
+                            <div class="input-group-text">
+                                <span>cm</span>
+                            </div>
+                            <input type="range" class="form-range slider-input" id="bicep" aria-label="Bicep" value="1" name="bicep_circumference" min="20" max="60" step="1" oninput="updateSlider(this.value)">
+                        </div>
+                    </div>
                   <button type="button" class="btn btn-secondary justify-content-center mx-auto p-3 m-2"  onclick = "myform()" name="submit">Submit <i class="fas fa-paper-plane" style="font-size: 1em; color: white"></i></button>
                   </form>
               </div>
@@ -137,8 +134,17 @@
     </div>
     <footer>
         <p class="d-flex justify-content-center">&copy; 2022 Walter Clayton, All Rights Reserved</p>
-    </footer>  
-</body>    
+    </footer>
+    <script type="text/javascript">
+        function updateSlider() {
+            const sliders = document.getElementsByClassName("slider-input");
+            for (let slider of sliders) {
+                let value = slider.value;
+                slider.parentNode.firstElementChild.innerHTML = slider.value
+            }
+        };
+    </script>  
+</body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
